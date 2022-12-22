@@ -1,0 +1,159 @@
+@font-face {
+    font-family: 'JetBrains Mono';
+    src: url('../Fonts/JetBrainsMono-Medium.woff2') format('woff2'),
+         url('../Fonts/JetBrainsMono-Medium.woff2 ') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'Colfax-Regular';
+    src: url('../Fonts/Colfax-Regular.woff') format('woff2'),
+        url('../Fonts/Colfax-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Colfax-Bold';
+    src: url('../Fonts/Colfax-Bold.woff2') format('woff2'),
+        url('../Fonts/Colfax-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+    letter-spacing: 0.05rem;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 10px;
+    background-color: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: #888;
+  }
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px rgb(49, 49, 49);
+    border-radius: 10px;
+  }
+  
+  
+  body {
+    width: 380px;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+  }
+  
+  .get-url {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  
+  .Title {
+    font-family: 'Colfax-Bold', sans-serif;
+    font-size: 3vh;
+    color: rgb(0, 192, 35);
+    border: 2px solid rgb(0, 0, 0);
+    position: relative;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    height: 10%;
+    background-color: rgba(255, 255, 255, 1);
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Sub-Heading {
+    font-family: 'Colfax-Regular', sans-serif;
+    color: rgba(94, 94, 94, 0.727);
+    font-size: 8px;
+    /*border: 2px solid rgb(0, 0, 0);*/
+    width: 100%;
+  }
+  
+  .image-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10, 1fr);
+    width: 95%;
+    height: 35%;
+    margin: 5px;
+    margin-top: 10%;
+    gap: 10%;
+  }
+  
+  .company {
+    margin-top: 10px;
+    justify-content: center;
+    grid-row: 1/ 4;
+    grid-column: 1 / 2; 
+    font-family: 'Colfax-Bold', sans-serif;
+    justify-content: bottom;
+    align-items: left;
+    color: rgb(0, 0, 0);
+    font-size: 1.4rem;
+   
+  }
+  
+  img{
+    grid-row: 1 / 10;
+    grid-column: 2 / 3;
+    border: 3px solid black;
+    box-shadow: 3px 3px 0px 0px rgb(0, 192, 35);
+    width: 100%;
+    height: 100%;
+    
+  }
+  
+  .alt {
+    grid-row: 4 / 7;
+    grid-column: 1 / 2;
+    font-family: 'JetBrains Mono', sans-serif;
+    /*justify-content: bottom;*/
+    align-items: left;
+    color: rgb(94, 94, 94);
+    font-size: 11px; /* This is the default font size */
+    min-height: 1em; /* This sets the minimum height of the text to one line */
+    min-width: 0;
+   
+  }
+  
+  .price {
+    grid-row: 7/ 8;
+    grid-column: 1 / 2;
+    font-family: 'Colfax-Bold', sans-serif;
+    /*justify-content: bottom;*/
+    align-items: left;
+    color: rgb(94, 94, 94);
+    font-size: 16px;
+  }
+  
+  button.view-product-button {
+    grid-row: 8.5 / 10;
+    grid-column: 1 / 2;
+    font-family: 'Colfax-Bold', sans-serif;
+    box-shadow: 2px 2px 0px 0px rgb(0, 192, 35);
+    /*justify-content: bottom;*/
+    align-items: left;
+    height: 100%;
+    background-color: white;
+    border : 2px solid rgb(0, 0, 0);
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+  }
+  
+  button.view-product-button:hover {
+    cursor: pointer;
+    
+  }

@@ -1,0 +1,17 @@
+{
+    "manifest_version":3,
+    "name": "Novo",
+    "description": "Find alternatives for brand new clothes in the form of second hand clothes.",
+    "version": "1.0",
+    "author": "Bakar",
+    "action": {
+        "default_popup": "index.html", 
+        "default_title": "Novo"
+    },
+    "permissions": [
+        "activeTab",
+        "downloads"
+    ]
+
+
+}   

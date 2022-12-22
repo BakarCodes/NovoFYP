@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <body>
+        <meta charset="utf-8">
+        <link href="./public/css/style.css" rel="stylesheet">
+    </head>
+        <div class="Title">
+            <h1>NOVO</h1>
+        </div>
+        <button id="fetch-btn">Fetch</button>
+        <p id="response-output">Response placeholder:</p>
+        <button id="get-url">Get Current url</button>
+        <form id="form">
+            <input type="text" id="query" placeholder="Enter search query">
+            <button type="submit" id="submit-button">Search</button>
+        </form>
+        <div class="Sub-Heading">
+            <h2>SUGGESTED PRODUCTS:</h2>
+        </div>
+        <form action="/scrape" method="GET">
+            <label for="query">Enter your search query:</label><br>
+            <input type="text" id="query" name="q"><br>
+            <input type="submit" value="Submit">
+        </form>          
+        <script src="crawler.js"></script>
+        <script src="script.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', ()=>{
+                const fetchBtn=document.getElementById
+                ('fetch-btn')
+                const responseText = document.getElementById
+                ('response-output')
+
+                fetchBtn.addEventListener('click', async()=>{
+                    const response = await fetch('/.netlify/functions/helloWorld').then(response => response.json())
+                    responseText.innerText = response
+                })
+            })
+        </script>
+    </body>
+</html>
