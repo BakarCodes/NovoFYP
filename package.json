@@ -1,0 +1,27 @@
+{
+  "name": "novofyp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "run": "npm run"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BakarCodes/NovoFYP.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BakarCodes/NovoFYP/issues"
+  },
+  "homepage": "https://github.com/BakarCodes/NovoFYP#readme",
+  "dependencies": {
+    "axios": "^1.2.1",
+    "domutils": "^3.0.1",
+    "fs": "^0.0.1-security",
+    "jsdom": "^20.0.3",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6"
+  }
+}

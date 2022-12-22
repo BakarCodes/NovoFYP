@@ -8,23 +8,16 @@
         <div class="Title">
             <h1>NOVO</h1>
         </div>
-        <button id="fetch-btn">Fetch</button>
-        <p id="response-output">Response placeholder:</p>
         <button id="get-url">Get Current url</button>
-        <form id="form">
-            <input type="text" id="query" placeholder="Enter search query">
-            <button type="submit" id="submit-button">Search</button>
-        </form>
         <div class="Sub-Heading">
             <h2>SUGGESTED PRODUCTS:</h2>
         </div>
-        <form action="/scrape" method="GET">
-            <label for="query">Enter your search query:</label><br>
-            <input type="text" id="query" name="q"><br>
-            <input type="submit" value="Submit">
-        </form>          
-        <script src="crawler.js"></script>
-        <script src="script.js"></script>
+        <form id="search-form">
+            <input type="text" id="query-input" name="query"/>
+            <button type="submit">Search</button>
+        </form>       
+        <script src="./js/crawler.js"></script>
+        <script src="./js/script.js"></script>
         <script>
             document.addEventListener('DOMContentLoaded', ()=>{
                 const fetchBtn=document.getElementById
