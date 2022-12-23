@@ -16,20 +16,7 @@
             <input type="text" id="query-input" name="query"/>
             <button type="submit">Search</button>
         </form>       
-        <script src="./js/crawler.js"></script>
+        <script src="./dist/bundle.js"></script>
         <script src="./js/script.js"></script>
-        <script>
-            document.addEventListener('DOMContentLoaded', ()=>{
-                const fetchBtn=document.getElementById
-                ('fetch-btn')
-                const responseText = document.getElementById
-                ('response-output')
-
-                fetchBtn.addEventListener('click', async()=>{
-                    const response = await fetch('/.netlify/functions/helloWorld').then(response => response.json())
-                    responseText.innerText = response
-                })
-            })
-        </script>
     </body>
 </html>

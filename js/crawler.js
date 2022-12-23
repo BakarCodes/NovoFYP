@@ -2,60 +2,9 @@ const rp = require('request-promise');
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
 const fs = require('fs');
-const axios = require('axios');
-const { compareDocumentPosition } = require('domutils');
-const request = require('request');
-const dom = new jsdom.JSDOM();
-const document = dom.window.document;
 
-// Function to invoke the serverless function
-async function invokeServerlessFunction(query) {
-  try {
-    // Send a POST request to the serverless function's URL with the query parameter
-    const response = await axios.post(
-      'https://your-site.com/.netlify/functions/your-function',
-      {
-        query: query,
-      }
-    );
-
-    // Do something with the response data (e.g. update the page with the scraped data)
-  } catch (error) {
-    // Handle the error (e.g. log it to the console)
-    console.error(error);
-  }
-}
-
-// Add a submit event listener to the form
-const form = document.getElementById('search-form');
-form.addEventListener('submit', function(event) {
-  // Prevent the default action (refresh the page)
-  event.preventDefault();
-
-  // Get the value of the query element
-  const query = document.getElementById('query-input').value;
-
-  // Invoke the serverless function with the query parameter
-  invokeServerlessFunction(query);
-});
-
-// Lambda function to handle the request and call the main function
-exports.handler = async (event, context) => {
-  // Get the query parameter from the event object
-  const query = event.queryStringParameters.query;
-
-  // Call the main function with the query
-  const data = await main(query);
-
-  // Return a response with the scraped data
-  return {
-    statusCode: 200,
-    body: JSON.stringify(data),
-  };
-};
- 
-
-async function main(query) {
+const query = "shoes"
+async function main() {
   // Initialize an empty array to store the scraped data
   let scrapedData = [];
   
@@ -74,6 +23,8 @@ async function main(query) {
   // Return the scraped data
   return scrapedData;
 }
+
+main(query);
 
 async function ebayProducts(query) {
   // Create a new session
